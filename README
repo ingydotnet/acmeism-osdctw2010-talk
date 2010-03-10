@@ -1,0 +1,41 @@
+                Please Check Your Guns at the Door
+                /C'Dent, the Acmeism and Everyone/
+
+                        by Ingy döt Net
+
+The status quo of OSDC and OSCON conferences is to attract the best
+programmers from the most exciting programming languages, bring them
+all to one tropical venue far several days, and let them go off into
+their own corners to discuss their own technology, in isolation from
+everyone else.
+
+Ingy döt Net believes that programming languages act as barriers to the
+growth of the hacker community and that truly great hackers rise above
+the language barrier level, and produce technology that serves all the
+languages. He calls this belief "Acmeism".
+
+In this hour long talk, Ingy will discuss the tenets of Acmeism and why
+you, young hacker, should believe it with all your heart. Once he is
+confident that you have checked your favorite programming artillery at
+the OSDC Gun Check Window, he will attempt to convert you by hypnotizing
+your hacker brain with these shiny and sexy Acmeist projects:
+
+    * C'Dent - A new module programming language (made from old ones like yours)
+    * TestML - A common unit test framework for every language
+    * ParseOpt.cd - Acmeist command options parser module, written in C'Dent
+    * YAML - An acmeist data serialization language
+    * Jemplate - An acmeist templating framework
+    * pQuery - Acmeist server-side jQuery
+
+----
+                            About Ingy
+
+Ingy döt Net is a hacker who started programming in Assembler on
+punchcards, switched over to Perl and has since become enlightened to
+the goodness of all the OSDC languages and the people who hack, support
+and evangelize them. He is one of the creators of YAML, a major CPAN
+contributor, the father of Acmeism and is drinking a double americano as
+you read this.
+
+Ingy is a citizen of the Earth who currently lives in Seattle and visits
+Taiwan every chance he can. He loves to make things DRY.
