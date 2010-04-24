@@ -1,0 +1,160 @@
+---- python
+
+import yaml
+
+object1 = {
+    'name': 'Ingy dot Net',
+    'number': 42,
+    'needs': [
+        'sex',
+        'drugs',
+        'rock and roll'
+    ]
+}
+
+yaml1 = yaml.dump(object1)
+object2 = yaml.load(yaml1)
+yaml2 = yaml.dump(object2)
+
+if yaml1 == yaml2:
+    print yaml1
+else:
+    raise Exception(yaml1 + "!=\n" + yaml2)
+
+---- perl
+
+use YAML;
+
+$object1 = {
+    'name' => 'Ingy dot Net',
+    'number' => 42,
+    'needs' => [
+        'sex',
+        'drugs',
+        'rock and roll'
+    ]
+};
+
+$yaml1 = Dump($object1);
+$object2 = Load($yaml1);
+$yaml2 = Dump($object2);
+
+if ($yaml1 eq $yaml2) {
+    print $yaml1;
+}
+else {
+    die $yaml1 . "!=\n" . $yaml2
+}
+
+---- ruby
+
+require 'yaml'
+
+object1 = {
+    'name' => 'Ingy dot Net',
+    'number' => 42,
+    'needs' => [
+        'sex',
+        'drugs',
+        'rock and roll'
+    ]
+}
+
+yaml1 = YAML::dump(object1)
+object2 = YAML::load(yaml1)
+yaml2 = YAML::dump(object2)
+
+if yaml1 == yaml2
+    print YAML.dump(object1)
+else
+    raise yaml1 + "!=\n" + yaml2
+end
+
+---- php
+
+<?php
+
+include("spyc.php");
+
+$object1 = array(
+    'name' => 'Ingy dot Net',
+    'number' => 42,
+    'needs' => array(
+        'sex',
+        'drugs',
+        'rock and roll'
+    )
+);
+
+$yaml1 = Spyc::YAMLDump($object1);
+$object2 = Spyc::YAMLLoad($yaml1);
+$yaml2 = Spyc::YAMLDump($object2);
+
+if ($yaml1 == $yaml2) {
+    echo $yaml1;
+}
+else {
+    throw new Exception($yaml1 . "!=\n" . $yaml2);
+}
+
+?>
+
+---- java
+
+import java.util.HashMap;
+import java.util.Map;
+import org.yaml.snakeyaml.Yaml;
+
+class dump_load {
+    public static void main(String[] args) {
+        Map<String, Object> object1 = new HashMap<String, Object>();
+        object1.put("name", "Ingy dot Net");
+        object1.put("number", 42);
+        object1.put("needs", new String[] { "sex", "drugs", "rock and roll" });
+
+        Yaml yaml = new Yaml();
+        String yaml1 = yaml.dump(object1);
+        Object object2 = yaml.load(yaml1);
+        String yaml2 = yaml.dump(object2);
+
+        if (yaml1.equals(yaml2)) {
+            System.out.println(yaml1);
+        }
+        else {
+            System.out.println(yaml1 + "!=\n" + yaml2);
+        }
+    }
+}
+
+---- haskell
+
+{-1};system(qq[pugs-DrIFT "$ARGV[0]" -o "$ARGV[1]"]);<<'--'
+-}{-# OPTIONS_GHC -pgmFperl -F -optFdump-load.hs #-}
+{-# LANGUAGE DeriveDataTypeable, PatternGuards #-}
+
+import Control.Monad
+import Data.Typeable
+import Data.Yaml.Syck
+import DrIFT.YAML
+
+data Person = Person
+    { name   :: String
+    , number :: Int
+    , needs  :: [String]
+    } deriving Typeable {-!derive: YAML!-}
+
+object1 = Person
+    { name   = "Ingy dot Net"
+    , number = 42
+    , needs  = [ "sex", "drugs", "rock and roll" ]
+    }
+
+main = do
+    yaml1 <- toYamlString object1
+    object2 <- fromYamlString yaml1
+    yaml2 <- toYamlString (object2 :: Person)
+    if yaml1 == yaml2
+        then putStr yaml1
+        else fail $ yaml1 ++ "!=\n" ++ yaml2
+
+--

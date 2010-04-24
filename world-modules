@@ -1,0 +1,45 @@
+---- perl
+package World;
+use Moose;
+
+sub greet {
+    my $self = shift;
+    print "Hello, world\n";
+}
+
+1;
+---- python
+class World:
+    def greet(self):
+        print "Hello, world\n",
+---- ruby
+class World
+    def greet
+        puts("Hello, world\n")
+        return
+    end
+end
+---- php
+<?php
+
+class World {
+    public function greet() {
+        print("Hello, world\n");
+    }
+}
+
+?>
+---- js
+(this.World = function() {}).prototype = {
+    greet: function() {
+        print("Hello, world");
+    }
+};
+---- java
+package org.cdent;
+
+public class World {
+    public void greet() {
+        System.out.print("Hello, world\n");
+    }
+}

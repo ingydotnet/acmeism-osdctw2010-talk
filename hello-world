@@ -1,0 +1,38 @@
+---- perl
+use World;
+my $world = new World;
+$world->greet;
+---- python
+from world import World
+
+def main():
+    world = World()
+    world.greet()
+
+if __name__ == '__main__':
+    main()
+---- ruby
+require 'World'
+world = World.new()
+world.greet()
+---- php
+<?php
+include("World.php");
+$world = new World;
+$world->greet();
+?>
+---- js
+load('world.js');
+(function() {
+    var world = new World();
+    world.greet();
+})();
+---- java
+import org.cdent.World;
+
+public class hello_world {
+    public static void main(String[] args) {
+        new World().greet();
+    }
+}
+
