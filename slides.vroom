@@ -30,6 +30,74 @@ by Ingy döt Net
 OSDC.tw - 25 April 2010 - Taipei
 
 ----
+== I Only Have One Thing to Tell You Today!
+----
+      ___           ___           ___                   
+     /\  \         /\  \         /\__\                  
+    |::\  \        \:\  \       /:/ _/_         ___     
+    |:|:\  \        \:\  \     /:/ /\  \       /\__\    
+  __|:|\:\  \   ___  \:\  \   /:/ /::\  \     /:/  /    
+ /::::|_\:\__\ /\  \  \:\__\ /:/_/:/\:\__\   /:/__/     
+ \:\~~\  \/__/ \:\  \ /:/  / \:\/:/ /:/  /  /::\  \     
+  \:\  \        \:\  /:/  /   \::/ /:/  /  /:/\:\  \    
+   \:\  \        \:\/:/  /     \/_/:/  /   \/__\:\  \   
+    \:\__\        \::/  /        /:/  /         \:\__\  
+     \/__/         \/__/         \/__/           \/__/  
+----
+     _____                      ___     
+    /  /::\       ___          /  /\    
+   /  /:/\:\     /  /\        /  /:/_   
+  /  /:/  \:\   /  /:/       /  /:/ /\  
+ /__/:/ \__\:| /__/::\      /  /:/ /:/_ 
+ \  \:\ /  /:/ \__\/\:\__  /__/:/ /:/ /\
+  \  \:\  /:/     \  \:\/\ \  \:\/:/ /:/
+   \  \:\/:/       \__\::/  \  \::/ /:/ 
+    \  \::/        /__/:/    \  \:\/:/  
+     \__\/         \__\/      \  \::/   
+                               \__\/    
+----
+    ___          ___           ___           ___     
+   /  /\        /  /\         /__/|         /  /\    
+  /  /:/       /  /::\       |  |:|        /  /:/_   
+ /__/::\      /  /:/\:\      |  |:|       /  /:/ /\  
+ \__\/\:\    /  /:/  \:\   __|  |:|      /  /:/ /:/_ 
+    \  \:\  /__/:/ \__\:\ /__/\_|:|____ /__/:/ /:/ /\
+     \__\:\ \  \:\ /  /:/ \  \:\/:::::/ \  \:\/:/ /:/
+     /  /:/  \  \:\  /:/   \  \::/~~~~   \  \::/ /:/ 
+    /__/:/    \  \:\/:/     \  \:\        \  \:\/:/  
+    \__\/      \  \::/       \  \:\        \  \::/   
+                \__\/         \__\/         \__\/    
+----
+      ___           ___           ___           ___     
+     /\__\         /\__\         /\  \         /\  \    
+    /::|  |       /:/  /        /::\  \        \:\  \   
+   /:|:|  |      /:/  /        /:/\ \  \        \:\  \  
+  /:/|:|__|__   /:/  /  ___   _\:\~\ \  \       /::\  \ 
+ /:/ |::::\__\ /:/__/  /\__\ /\ \:\ \ \__\     /:/\:\__\
+ \/__/~~/:/  / \:\  \ /:/  / \:\ \:\ \/__/    /:/  \/__/
+       /:/  /   \:\  /:/  /   \:\ \:\__\     /:/  /     
+      /:/  /     \:\/:/  /     \:\/:/  /     \/__/      
+     /:/  /       \::/  /       \::/  /                 
+     \/__/         \/__/         \/__/                  
+     _____                      ___         ---
+    /  /::\       ___          /  /\       |   |
+   /  /:/\:\     /  /\        /  /:/_      |   |
+  /  /:/  \:\   /  /:/       /  /:/ /\     |   |
+ /__/:/ \__\:| /__/::\      /  /:/ /:/_    |   |
+ \  \:\ /  /:/ \__\/\:\__  /__/:/ /:/ /\   |   |
+  \  \:\  /:/     \  \:\/\ \  \:\/:/ /:/   |   |
+   \  \:\/:/       \__\::/  \  \::/ /:/     ---
+    \  \::/        /__/:/    \  \:\/:/      ---
+     \__\/         \__\/      \  \::/      |   |
+                               \__\/        ---
+----
+== The End\wBeginning
+
+Any Questions?
+
+http://ingydotnet.github.com/acmeism-osdctw2010-talk/
+
+----
 == Ingy döt Net
 
 * 100+ Perl modules on CPAN
@@ -39,10 +107,10 @@ OSDC.tw - 25 April 2010 - Taipei
 +  ...YET!!!
 
 ----
-== What is your Ingy Number?
+== What is your Ingy döt Number?
 
 * Paul Erdős is my latest Hero
-+* He has an umlaut too!
++* He has an umlaut tőö!
 +* Erdős invented Pair Programming
 
 +* The SF
@@ -106,7 +174,10 @@ Guess what I found out???
 
   * Introduce Acmeism
   * Show Some Acmeist Projects
-  * Recruit Acmeist Hackers
+    * C'Dent
+    * TestML
+    * Stardoc
+  * Create an Acmeist Hacker Army!!
 
 +* What is HOPE??
 
@@ -247,6 +318,7 @@ This is a module that Miyagawa-san stole from the Beatles...
   * Variables & Assignments
   * Builtin Functions & Standard Library
   * Module Inclusion & Exceptional Handling
+  * Inheritance and Identity
 
   * Regular Expressions?
 
@@ -319,6 +391,42 @@ This is a module that Miyagawa-san stole from the Beatles...
 * Hack Once, Please Everyone!
 
 ----
+== C'Dent Syntaxen
+
+C'Dent lets you write modules in:
+
+* Perl
+* Python
+* Ruby
+* JavaScript
+
++Very strict subsets of these...
+
+----
+== C'Dent Runtimes
+
+C'Dent lets you write modules in:
+
+* Perl
+* Python
+* Ruby
+* JavaScript
+
++* PHP
+* Java
+* Python 3
+* Perl 6
+
+----
+== C'Dent Runtimes
+
+and as of this morning...
+
++C'Dent compiles to Go!
+
+Thank you au + sartak!!!
+
+----
 == Who is C'Dent?
 
 * C'Dent was named after my friend, Chris Dent
@@ -359,7 +467,8 @@ This is a module that Miyagawa-san stole from the Beatles...
 > cdent --compile --in=world.py --out=java
 
 +> cdent --compile --in=world.py --out=pm6
-+> cdent --compile --in=world.py --out=py3
+> cdent --compile --in=world.py --out=py3
+> cdent --compile --in=world.py --out=go
 
 ----
 == How C'Dent works (Step 1)
@@ -425,6 +534,9 @@ or:
 
     easy_install cdent
 
+or
+
+    git clone git://github.com/ingydotnet/cdent.git
 
 +       >>> Show C'Dent compiler in action <<<
 
@@ -473,7 +585,7 @@ preprocessed YAML files that contain Regexp based rules.
 Let's take a looksy...
 
     * ../cdent/cdent/parser/
-    * ../cdent/cdent/parser/python/grammar
+    * ../cdent/cdent/parser/python/grammar.py
     * ../cdent/src
 
 +* New Acmeist module called "reParse"
@@ -597,6 +709,7 @@ People have compared C'Dent to things like:
 +* Who wants to do Ruby? TOMORROW!
 ----
 # Simple Example (3 Tests)
+
 %TestML: 1.0
 
 *mixed.uppercase() == *upper;
@@ -612,6 +725,7 @@ People have compared C'Dent to things like:
 --- upper: I LOVE LUCY
 ----
 # Example TestML for C'Dent
+
 %TestML: 1.0
 
 *cd_py.compile('rb') == *rb;
@@ -713,7 +827,7 @@ end
 ----
 == The End
 
-Questions?
+Any Questions?
 
 http://ingydotnet.github.com/acmeism-osdctw2010-talk/
 
