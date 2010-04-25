@@ -39,6 +39,20 @@ OSDC.tw - 25 April 2010 - Taipei
 +  ...YET!!!
 
 ----
+== What is your Ingy Number?
+
+* Paul Erdős is my latest Hero
++* He has an umlaut too!
++* Erdős invented Pair Programming
+
++* The SF
+* The Book
+
+* Ingy loves to pair...
+
++== LOWER your Ingy Number!   PLEASE!!!
+
+----
 == Ingy the Inventor
 
 * Inline - Write Perl subroutines in any language
@@ -69,9 +83,11 @@ I have ported a lot of code:
 ----
 == Ingy the Porter
 
-Guess what I found out about these programming languages???
+Guess what I found out???
 
 +THEY ARE ALL THE SAME!!!
+
+    Perl == Python == JavaScript == Ruby
 
 * Line for line. Idiom for idiom.
 * They tell computers what to do.
@@ -86,7 +102,8 @@ Guess what I found out about these programming languages???
 ----
 == Acmeism - HOPE for the Hacker Community
 
-* Goals:
+* In this talk, Ingy will:
+
   * Introduce Acmeism
   * Show Some Acmeist Projects
   * Recruit Acmeist Hackers
@@ -95,6 +112,31 @@ Guess what I found out about these programming languages???
 
 +          Hack Once, Please Everyone!
 
+----
+== The 10 Rules of Acmeism
+
+The first rule of Acmeism is:
+
++1) YOU DON'T TALK ABOUT ACMEISM!
+
++Just kidding :)
+
+----
+== The 10 Rules of Acmeism
+
+1) All programming languages are the same
+2) Programming languages never die
+
++3) Programming languages divide programmers
+4) Programmer communities don't need to be divided
+
++5) Modules are the key to good programming
+6) Modules need to be shared (ported) across languages
+
++7) ... under construction ...
+8)
+9)
+10)
 ----
 == Acmeism & the Tower of Babel
 
@@ -169,25 +211,44 @@ This is a module that Miyagawa-san stole from the Beatles...
 * Ruby
 * JavaScript
 * Python
+* PHP
 * Java
+
++== OSCON - The (slightly more expensive) Acmeist Conference ;)
 
 ----
 == OSDC Census
 
 * Who here writes Perl?
-* Ruby? JavaScript? Python? Java? Others?
+* Ruby? JavaScript? Python? PHP? Java? Others?
 
 * Who here publishes packages?
-* CPAN? RubyGems? PyPi? JSAN?
+* CPAN? RubyGems? PyPi? JSAN? Pear?
 
 ----
 == Modules - 包子 for Programmers
 
 * Modules are ICs for Software
-  * IC == Integrated Circuits
++  * IC == Integrated Circuits
   * IC == Idea Containers
 
 * Modern Programming == Using Good Modules
+
+* Modules keep things DRY!!!
+
+----
+== Acmeist Modules are Portable
+
+* Modules don't need to be fancy under the hood
+* Useful and _portable_ modules can be baked w/ staples:
+
+  * Modules, Classes & Methods
+  * Loops & Conditionals
+  * Variables & Assignments
+  * Builtin Functions & Standard Library
+  * Module Inclusion & Exceptional Handling
+
+  * Regular Expressions?
 
 ----
 == Ingy's Modules
@@ -219,6 +280,7 @@ This is a module that Miyagawa-san stole from the Beatles...
   every day...
   before breakfast...
 +  * Watch the rest of this talk!!!
+
 ----
 == Scripts as Modules?
 
@@ -236,6 +298,7 @@ This is a module that Miyagawa-san stole from the Beatles...
 == Introducing C'Dent
 
 * I am working on a new Programming Language
+                        --------------------
 * It is called "C'Dent"
 
 +* The World has too many programming languages already??!!
@@ -283,13 +346,39 @@ This is a module that Miyagawa-san stole from the Beatles...
 ---- include world-modules
 
 ----
+== Dive into C'Dent
+
+> cdent --help
+> cdent --version
+
++> cdent --compile --in=world.py --out=rb
+> cdent --compile --in=world.py --out=pm
+> cdent --compile --in=world.py --out=js
+> cdent --compile --in=world.py --out=php
+> cdent --compile --in=world.py --out=py
+> cdent --compile --in=world.py --out=java
+
++> cdent --compile --in=world.py --out=pm6
++> cdent --compile --in=world.py --out=py3
+
+----
 == How C'Dent works (Step 1)
 
 * C'Dent defines a common abstract structure tree
 * From this structure you can emit equivalent modules
   * In many many languages
 * The world module tree can be viewed in yaml.
+---- python
+# world.cd.py
+"""\
+This is World class :)
+"""
+
+class World():
+    def greet(self):
+        print "Hello, world"
 ---- yaml
+# world.cd.yaml
 %TAG ! tag:cdent.org,2010:
 --- !AST
 has:
@@ -330,29 +419,80 @@ has:
 * C'Dent is a compiler.
 * Get it here: http://pypi.python.org/pypi/cdent/
 
-    cdent --compile --in=world.cd.py --to=js
+    pip install cdent
 
-    >>> Show C'Dent compiler in action <<<
+or:
+
+    easy_install cdent
+
+
++       >>> Show C'Dent compiler in action <<<
+
+----
+== How C'Dent compilation works (Overview)
+
+* Parse - Source to AST
+
+* Analyze - Detect and Validate types
+
+    ( .cd AST form )
+
+* Emit - Create language specific modules
 
 ----
 == C'Dent implementation
 
-* C'Dent is currently a python implementation
-* It uses very Acmeist code
+* C'Dent is currently a Python implementation
+
+* I chose Python because it has the best YAML support
+  * I can use TAGs properly!
+
+* Python is also a pretty good language
+* And something fun and new for Ingy!
+
+----
+== C'Dent implementation
+
+* C'Dent has **NO** dependency on Python!
+
+    OR ANY OTHER LANGUAGE
+
+* C'Dent uses very Acmeist code
 * Can be switched to a new language at any time
-* Want to use Haskell...
+* I personally want to use Haskell...
   * Need Taiwanese help
 
-* Self hosting???
+* Will C'Dent be self-hosted???
+
+----
+== The C'Dent Parser Grammars
+
+C'Dent uses a grammar that is a Python class generated from
+preprocessed YAML files that contain Regexp based rules.
+
+Let's take a looksy...
+
+    * ../cdent/cdent/parser/
+    * ../cdent/cdent/parser/python/grammar
+    * ../cdent/src
+
++* New Acmeist module called "reParse"
+----
+== Error Handling
+
+* Demo a current parse error
+* Type errors are detected after parsing
+  * AST contains line number info
 
 ----
 == C'Dent is Statically Typed!!
 
 * OSDC Langs are dynamically, and often weakly, typed
 * AST needs exact types to generate code
-* Simple example
+* Simple example:
 
-   if ($a eq 'foo' or $b == 42) ...
+   if str == 'foo' or num == 42:
+   if ($str eq 'foo' or $num == 42) {
 
 * C'Dent scans the AST and assigns a type to every object
 * If it can't find the type or finds a mismatch...
@@ -378,7 +518,23 @@ has:
 ----
 == C'Dent Design Goals
 
-* 
+* Find a usable OO subset
+* Reuse when possible
+  * Runtime when not possible
+* Make Foo.cd.* modules actually work.
+* Make Foo.* modules nice to read.
+* Don't use more runtime than you need.
+
+----
+== C'Dent Comparisons
+
+People have compared C'Dent to things like:
+
+* Parrot (inside out)
+* SWIG
+* CORBA
+* Others??
+
 ----
 == C - The Ultimate Backend
 
@@ -418,13 +574,112 @@ has:
 ----
 == TestML
 
+* What good are modules without tests?
+
++* What good are Portable modules without Portable tests?
+
+* TestML is an agnostic unit test language
+  * Implemented in every C'Dent target language
+
+* TDD meets Acmeism!
+
+  http://testml.org
+----
+== Introducing TestML
+
+* TestML is Acmeist data driven unit testing
+* Based on Test-Base (Perl & JavaScript)
+
+* Currently implemented in:
+  * Perl
+  * Python
+
++* Who wants to do Ruby? TOMORROW!
+----
+# Simple Example (3 Tests)
+%TestML: 1.0
+
+*mixed.uppercase() == *upper;
+*mixed.lowercase() == *lower;
+
+=== Test mixed case string
+--- mixed: I Like Pie
+--- upper: I LIKE PIE
+--- lower: i like pie
+
+=== Test lower case string
+--- mixed: I Love Lucy
+--- upper: I LOVE LUCY
+----
+# Example TestML for C'Dent
+%TestML: 1.0
+
+*cd_py.compile('rb') == *rb;
+*cd_py.compile('js') == *js;
+
+=== Hello, world
+--- cd_py
+class World:
+    def greet(self):
+        print "Hello, world\n",
+--- rb
+class World
+    def greet
+        puts("Hello, world\n")
+        return
+    end
+end
+--- js
+(this.World = function() {}).prototype = {
+    greet: function() {
+        print("Hello, world");
+    }
+};
+
+----
+== TestML Design Goals
+
+* TestML use portable coding
+* reParse to parse the language
+
+* TestML works with multiple test *frameworks*
+* Python == unittest, py.test, nose
+* Runner class for each framework
+
+* Language specific code goes in a Bridge class
+* Bridge classes may one day be C'Dent!
+
+----
+== Perl 5 and Perl 6
+
+* Rakudo is the new Perl 6 engine
+* Perl 6 is vastly different from Perl 5
+* All the good modules need to be rewritten
+* It would be great if they passed the same tests
+
+----
+== Hackathon & TestML
+
+* I want to hack on TestML tomorrow!
+* HELP ME!
+
+* TestML tests for C'Dent
+* TestML in your language
+
 ----
 == Stardoc
 
-* A new project name based on lots of old work
+* What good are Portable modules without Portable documentation?
+
+* Foo.rst > Foo.pod > Foo.asc > Foo.wiki > Foo.html
+
 * >>> Wikiwyg <<<
 * Wikitext.pm
+
 * #stardoc and #*doc
+* http://stardoc.org
+
+* CharlesIsMagic
 
 ----
 == StarDoc is like C'Dent for Doc
@@ -437,6 +692,7 @@ has:
 * Markdown
 * Asciidoc
 * RDoc
+* Wiki*
 * HTML
 
 ----
