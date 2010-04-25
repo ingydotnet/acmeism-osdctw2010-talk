@@ -8,7 +8,7 @@ function navigate(e) {
         ? e.keyCode
         : e.which;
     if (keynum == 8) {
-        window.location = "053" + ".html";
+        window.location = "053b" + ".html";
         return false;
     }
     if (keynum == 13 || keynum == 32) {
@@ -27,21 +27,21 @@ function navigate(e) {
 <pre>
 
 
-
-
-                     The C'Dent Parser Grammars
+                          Dive into C'Dent
      
-     C'Dent uses a grammar that is a Python class generated from
-     preprocessed YAML files that contain Regexp based rules.
+     &gt; cdent --help
+     &gt; cdent --version
      
-     Let's take a looksy...
+     &gt; cdent --compile --in=world.py --out=rb
+     &gt; cdent --compile --in=world.py --out=pm
+     &gt; cdent --compile --in=world.py --out=js
+     &gt; cdent --compile --in=world.py --out=php
+     &gt; cdent --compile --in=world.py --out=py
+     &gt; cdent --compile --in=world.py --out=java
      
-         * ../cdent/cdent/parser/
-         * ../cdent/cdent/parser/python/grammar
-         * ../cdent/src
-     
-     * New Acmeist module called &quot;reParse&quot;
-
+     &gt; cdent --compile --in=world.py --out=pm6
+     &gt; cdent --compile --in=world.py --out=py3
+     &gt; cdent --compile --in=world.py --out=go
 
 
 

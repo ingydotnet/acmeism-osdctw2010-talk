@@ -8,7 +8,7 @@ function navigate(e) {
         ? e.keyCode
         : e.which;
     if (keynum == 8) {
-        window.location = "061z" + ".html";
+        window.location = "061" + ".html";
         return false;
     }
     if (keynum == 13 || keynum == 32) {
@@ -29,17 +29,17 @@ function navigate(e) {
 
 
 
-                               TestML
+                     The C'Dent Parser Grammars
      
-     * What good are modules without tests?
+     C'Dent uses a grammar that is a Python class generated from
+     preprocessed YAML files that contain Regexp based rules.
      
-
-
-
-
-
-
-
+     Let's take a looksy...
+     
+         * ../cdent/cdent/parser/
+         * ../cdent/cdent/parser/python/grammar.py
+         * ../cdent/src
+     
 
 
 

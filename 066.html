@@ -8,7 +8,7 @@ function navigate(e) {
         ? e.keyCode
         : e.which;
     if (keynum == 8) {
-        window.location = "065" + ".html";
+        window.location = "065z" + ".html";
         return false;
     }
     if (keynum == 13 || keynum == 32) {
@@ -29,17 +29,17 @@ function navigate(e) {
 
 
 
-                         TestML Design Goals
+
+
+                         C'Dent Design Goals
      
-     * TestML use portable coding
-     * reParse to parse the language
-     
-     * TestML works with multiple test *frameworks*
-     * Python == unittest, py.test, nose
-     * Runner class for each framework
-     
-     * Language specific code goes in a Bridge class
-     * Bridge classes may one day be C'Dent!
+     * Find a usable OO subset
+     * Reuse when possible
+       * Runtime when not possible
+     * Make Foo.cd.* modules actually work.
+     * Make Foo.* modules nice to read.
+     * Don't use more runtime than you need.
+
 
 
 

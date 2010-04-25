@@ -8,7 +8,7 @@ function navigate(e) {
         ? e.keyCode
         : e.which;
     if (keynum == 8) {
-        window.location = "063z" + ".html";
+        window.location = "063" + ".html";
         return false;
     }
     if (keynum == 13 || keynum == 32) {
@@ -28,20 +28,20 @@ function navigate(e) {
 
 
 
-     # Simple Example (3 Tests)
-     %TestML: 1.0
+                    C'Dent is Statically Typed!!
      
-     *mixed.uppercase() == *upper;
-     *mixed.lowercase() == *lower;
+     * OSDC Langs are dynamically, and often weakly, typed
+     * AST needs exact types to generate code
+     * Simple example:
      
-     === Test mixed case string
-     --- mixed: I Like Pie
-     --- upper: I LIKE PIE
-     --- lower: i like pie
+        if str == 'foo' or num == 42:
+        if ($str eq 'foo' or $num == 42) {
      
-     === Test lower case string
-     --- mixed: I Love Lucy
-     --- upper: I LOVE LUCY
+     * C'Dent scans the AST and assigns a type to every object
+     * If it can't find the type or finds a mismatch...
+       ... it's a *compile-time* error.
+     
+     * At runtime there is no extra type checking
 
 
 

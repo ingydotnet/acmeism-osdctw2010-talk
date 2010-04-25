@@ -1,0 +1,54 @@
+<html>
+<head>
+<title>016.php</title>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<script>
+function navigate(e) {
+    var keynum = (window.event) // IE
+        ? e.keyCode
+        : e.which;
+    if (keynum == 8) {
+        window.location = "015.rb" + ".html";
+        return false;
+    }
+    if (keynum == 13 || keynum == 32) {
+        window.location = "017.java" + ".html";
+        return false;
+    }
+    if (keynum == 73 || keynum == 105) {
+        window.location = "index.html";
+        return false;
+    }
+    return true;
+}
+</script>
+</head>
+<body onkeypress="return navigate(event)">
+<pre>     &lt;?php
+     
+     include(&quot;spyc.php&quot;);
+     
+     $object1 = array(
+         'name' =&gt; 'Ingy dot Net',
+         'number' =&gt; 42,
+         'needs' =&gt; array(
+             'sex',
+             'drugs',
+             'rock and roll'
+         )
+     );
+     
+     $yaml1 = Spyc::YAMLDump($object1);
+     $object2 = Spyc::YAMLLoad($yaml1);
+     $yaml2 = Spyc::YAMLDump($object2);
+     
+     if ($yaml1 == $yaml2) {
+         echo $yaml1;
+     }
+     else {
+         throw new Exception($yaml1 . &quot;!=\n&quot; . $yaml2);
+     }
+     
+     ?&gt;
+</pre>
+</body>
