@@ -1,0 +1,52 @@
+<html>
+<head>
+<title>067</title>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<script>
+function navigate(e) {
+    var keynum = (window.event) // IE
+        ? e.keyCode
+        : e.which;
+    if (keynum == 8) {
+        window.location = "066" + ".html";
+        return false;
+    }
+    if (keynum == 13 || keynum == 32) {
+        window.location = "068" + ".html";
+        return false;
+    }
+    if (keynum == 73 || keynum == 105) {
+        window.location = "index.html";
+        return false;
+    }
+    return true;
+}
+</script>
+</head>
+<body onkeypress="return navigate(event)">
+<pre>
+
+
+
+
+
+
+
+                          Perl 5 and Perl 6
+     
+     * Rakudo is the new Perl 6 engine
+     * Perl 6 is vastly different from Perl 5
+     * All the good modules need to be rewritten
+     * It would be great if they passed the same tests
+
+
+
+
+
+
+
+
+
+
+</pre>
+</body>

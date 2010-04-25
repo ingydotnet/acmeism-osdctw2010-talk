@@ -1,0 +1,52 @@
+<html>
+<head>
+<title>011.java</title>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<script>
+function navigate(e) {
+    var keynum = (window.event) // IE
+        ? e.keyCode
+        : e.which;
+    if (keynum == 8) {
+        window.location = "010.php" + ".html";
+        return false;
+    }
+    if (keynum == 13 || keynum == 32) {
+        window.location = "012.hs" + ".html";
+        return false;
+    }
+    if (keynum == 73 || keynum == 105) {
+        window.location = "index.html";
+        return false;
+    }
+    return true;
+}
+</script>
+</head>
+<body onkeypress="return navigate(event)">
+<pre>     import java.util.HashMap;
+     import java.util.Map;
+     import org.yaml.snakeyaml.Yaml;
+     
+     class dump_load {
+         public static void main(String[] args) {
+             Map&lt;String, Object&gt; object1 = new HashMap&lt;String, Object&gt;();
+             object1.put(&quot;name&quot;, &quot;Ingy dot Net&quot;);
+             object1.put(&quot;number&quot;, 42);
+             object1.put(&quot;needs&quot;, new String[] { &quot;sex&quot;, &quot;drugs&quot;, &quot;rock and roll&quot; });
+     
+             Yaml yaml = new Yaml();
+             String yaml1 = yaml.dump(object1);
+             Object object2 = yaml.load(yaml1);
+             String yaml2 = yaml.dump(object2);
+     
+             if (yaml1.equals(yaml2)) {
+                 System.out.println(yaml1);
+             }
+             else {
+                 System.out.println(yaml1 + &quot;!=\n&quot; + yaml2);
+             }
+         }
+     }
+</pre>
+</body>

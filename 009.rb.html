@@ -1,0 +1,52 @@
+<html>
+<head>
+<title>009.rb</title>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<script>
+function navigate(e) {
+    var keynum = (window.event) // IE
+        ? e.keyCode
+        : e.which;
+    if (keynum == 8) {
+        window.location = "008.pl" + ".html";
+        return false;
+    }
+    if (keynum == 13 || keynum == 32) {
+        window.location = "010.php" + ".html";
+        return false;
+    }
+    if (keynum == 73 || keynum == 105) {
+        window.location = "index.html";
+        return false;
+    }
+    return true;
+}
+</script>
+</head>
+<body onkeypress="return navigate(event)">
+<pre>     require 'yaml'
+     
+     object1 = {
+         'name' =&gt; 'Ingy dot Net',
+         'number' =&gt; 42,
+         'needs' =&gt; [
+             'sex',
+             'drugs',
+             'rock and roll'
+         ]
+     }
+     
+     yaml1 = YAML::dump(object1)
+     object2 = YAML::load(yaml1)
+     yaml2 = YAML::dump(object2)
+     
+     if yaml1 == yaml2
+         print YAML.dump(object1)
+     else
+         raise yaml1 + &quot;!=\n&quot; + yaml2
+     end
+
+
+
+</pre>
+</body>

@@ -1,0 +1,52 @@
+<html>
+<head>
+<title>055</title>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<script>
+function navigate(e) {
+    var keynum = (window.event) // IE
+        ? e.keyCode
+        : e.which;
+    if (keynum == 8) {
+        window.location = "054" + ".html";
+        return false;
+    }
+    if (keynum == 13 || keynum == 32) {
+        window.location = "056" + ".html";
+        return false;
+    }
+    if (keynum == 73 || keynum == 105) {
+        window.location = "index.html";
+        return false;
+    }
+    return true;
+}
+</script>
+</head>
+<body onkeypress="return navigate(event)">
+<pre>
+
+
+
+                    C'Dent is Statically Typed!!
+     
+     * OSDC Langs are dynamically, and often weakly, typed
+     * AST needs exact types to generate code
+     * Simple example:
+     
+        if str == 'foo' or num == 42:
+        if ($str eq 'foo' or $num == 42) {
+     
+     * C'Dent scans the AST and assigns a type to every object
+     * If it can't find the type or finds a mismatch...
+       ... it's a *compile-time* error.
+     
+     * At runtime there is no extra type checking
+
+
+
+
+
+
+</pre>
+</body>

@@ -1,0 +1,52 @@
+<html>
+<head>
+<title>041.php</title>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<script>
+function navigate(e) {
+    var keynum = (window.event) // IE
+        ? e.keyCode
+        : e.which;
+    if (keynum == 8) {
+        window.location = "040.rb" + ".html";
+        return false;
+    }
+    if (keynum == 13 || keynum == 32) {
+        window.location = "042.js" + ".html";
+        return false;
+    }
+    if (keynum == 73 || keynum == 105) {
+        window.location = "index.html";
+        return false;
+    }
+    return true;
+}
+</script>
+</head>
+<body onkeypress="return navigate(event)">
+<pre>
+
+
+
+
+
+     &lt;?php
+     
+     class World {
+         public function greet() {
+             print(&quot;Hello, world\n&quot;);
+         }
+     }
+     
+     ?&gt;
+
+
+
+
+
+
+
+
+
+</pre>
+</body>
